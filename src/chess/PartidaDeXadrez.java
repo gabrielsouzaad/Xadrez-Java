@@ -29,7 +29,7 @@ public class PartidaDeXadrez {
 	
 	private void iniciarSetup() {
 		tabuleiro.lugarPeca(new Torre(tabuleiro, Cor.WHITE), new Posicao(2,1));
-		tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.BLACK), new Posicao(0,4));
+		tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.BLACK), new Posicao(0,1));
 		tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.WHITE), new Posicao(7,4));
 	}
 }
