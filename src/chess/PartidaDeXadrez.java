@@ -32,8 +32,18 @@ public class PartidaDeXadrez {
 	}
 	
 	private void iniciarSetup() {
-		colocarPecaNova('b', 6, new Torre(tabuleiro, Cor.WHITE));
-		colocarPecaNova('e', 8,new Rei(tabuleiro, Cor.BLACK));
-		colocarPecaNova('e', 1,new Rei(tabuleiro, Cor.WHITE));
+		colocarPecaNova('c', 1, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('c', 2, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('d', 2, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('e', 2, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('e', 1, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('d', 1, new Torre(tabuleiro, Cor.WHITE));
+
+		colocarPecaNova('c', 7, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('c', 8, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('d', 7, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('e', 7, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('e', 8, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('d', 8, new Rei(tabuleiro, Cor.BLACK));
 	}
 }

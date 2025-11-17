@@ -1,7 +1,6 @@
 package application;
 
 
-import boardgame.Tabuleiro;
 import chess.PartidaDeXadrez;
 
 public class Programa {
