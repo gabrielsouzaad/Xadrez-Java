@@ -10,11 +10,23 @@ import chess.pieces.Torre;
 
 public class PartidaDeXadrez {
 	
+	private int turno;
+	private Cor jogadorAtual;
 	private Tabuleiro tabuleiro;
 	
 	public PartidaDeXadrez() {
 		tabuleiro = new Tabuleiro(8, 8);
+		turno = 1;
+		jogadorAtual = Cor.WHITE;
 		iniciarSetup();
+	}
+	
+	public int getTurno() {
+		return turno;
+	}
+	
+	public Cor getJogadorAtual() {
+		return jogadorAtual;
 	}
 	
 	public PecaDeXadrez[][] getPecas() {
@@ -39,6 +51,7 @@ public class PartidaDeXadrez {
 		validacaoPosicaoDeOrigem(origem);
 		validacaoPosicaoDestino(origem, destino);
 		Peca capturarPeca = moverPeca(origem, destino);
+		proximoTurno();
 		return (PecaDeXadrez)capturarPeca;
 	}
 	
@@ -53,6 +66,9 @@ public class PartidaDeXadrez {
 		if (!tabuleiro.existePeca(posicao)) {
 			throw new ChessException("Não existe peça nessa posição");
 		}
+		if (jogadorAtual != ((PecaDeXadrez)tabuleiro.peca(posicao)).getCor()) {
+			throw new ChessException("A peça escolhida não é sua");
+		}
 		if (!tabuleiro.peca(posicao).possivelMovimento()) {
 			throw new ChessException("Não existe movimento disponivel para a peça escolhida");
 		}
@@ -62,6 +78,11 @@ public class PartidaDeXadrez {
 		if (!tabuleiro.peca(origem).possibilidaDeMover(destino)) {
 			throw new ChessException("A peça escolhida não pode se mover para posição de destino");
 		}
+	}
+	
+	private void proximoTurno() {
+		turno++;
+		jogadorAtual = (jogadorAtual == Cor.WHITE) ? Cor.BLACK : Cor.WHITE;
 	}
 
 	
