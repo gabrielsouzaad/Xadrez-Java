@@ -88,7 +88,8 @@ public class PartidaDeXadrez {
 	}
 	
 	private Peca moverPeca(Posicao origem, Posicao destino) {
-		Peca p = tabuleiro.removerPeca(origem);
+		PecaDeXadrez p = (PecaDeXadrez)tabuleiro.removerPeca(origem);
+		p.aumentarContagemMovimentos();
 		Peca capturarPeca = tabuleiro.removerPeca(destino);
 		tabuleiro.lugarPeca(p, destino);
 		
@@ -103,7 +104,8 @@ public class PartidaDeXadrez {
 	}
 	
 	private void desfazerMovimento(Posicao origem, Posicao destino, Peca capturarPeca) {
-		Peca p = tabuleiro.removerPeca(destino);
+		PecaDeXadrez p = (PecaDeXadrez)tabuleiro.removerPeca(destino);
+		p.diminuirContagemMovimentos();
 		tabuleiro.lugarPeca(p, origem);
 		
 		if (capturarPeca != null) {
