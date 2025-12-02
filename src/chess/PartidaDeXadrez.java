@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import boardgame.Peca;
 import boardgame.Posicao;
 import boardgame.Tabuleiro;
+import chess.pieces.Peao;
 import chess.pieces.Rei;
 import chess.pieces.Torre;
 
@@ -197,13 +198,30 @@ public class PartidaDeXadrez {
 	}
 	
 	private void iniciarSetup() {
-		colocarPecaNova('h', 7, new Torre(tabuleiro, Cor.WHITE));
-		colocarPecaNova('d', 1, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('a', 1, new Torre(tabuleiro, Cor.WHITE));
 		colocarPecaNova('e', 1, new Rei(tabuleiro, Cor.WHITE));
+		colocarPecaNova('h', 1, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('a', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('b', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('c', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('d', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('e', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('f', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('g', 2, new Peao(tabuleiro, Cor.WHITE));
+		colocarPecaNova('h', 2, new Peao(tabuleiro, Cor.WHITE));
 	
-		colocarPecaNova('b', 8, new Torre(tabuleiro, Cor.BLACK));
-		colocarPecaNova('a', 8, new Rei(tabuleiro, Cor.BLACK));
-	
+		colocarPecaNova('a', 8, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('e', 8, new Rei(tabuleiro, Cor.BLACK));
+		colocarPecaNova('h', 8, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('a', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('b', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('c', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('d', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('e', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('f', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('g', 7, new Peao(tabuleiro, Cor.BLACK));
+		colocarPecaNova('h', 7, new Peao(tabuleiro, Cor.BLACK));
+		
 	
 	
 	}
