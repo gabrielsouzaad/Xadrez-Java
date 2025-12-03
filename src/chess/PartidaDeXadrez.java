@@ -10,6 +10,7 @@ import boardgame.Tabuleiro;
 import chess.pieces.Bispo;
 import chess.pieces.Cavalo;
 import chess.pieces.Peao;
+import chess.pieces.Rainha;
 import chess.pieces.Rei;
 import chess.pieces.Torre;
 
@@ -203,6 +204,7 @@ public class PartidaDeXadrez {
 		colocarPecaNova('a', 1, new Torre(tabuleiro, Cor.WHITE));
 		colocarPecaNova('b', 1, new Cavalo(tabuleiro, Cor.WHITE));
 		colocarPecaNova('c', 1, new Bispo(tabuleiro, Cor.WHITE));
+		colocarPecaNova('d', 1, new Rainha(tabuleiro, Cor.WHITE));
 		colocarPecaNova('e', 1, new Rei(tabuleiro, Cor.WHITE));
 		colocarPecaNova('f', 1, new Bispo(tabuleiro, Cor.WHITE));
 		colocarPecaNova('g', 1, new Cavalo(tabuleiro, Cor.WHITE));
@@ -219,6 +221,7 @@ public class PartidaDeXadrez {
 		colocarPecaNova('a', 8, new Torre(tabuleiro, Cor.BLACK));
 		colocarPecaNova('b', 8, new Cavalo(tabuleiro, Cor.BLACK));
 		colocarPecaNova('c', 8, new Bispo(tabuleiro, Cor.BLACK));
+		colocarPecaNova('d', 8, new Rainha(tabuleiro, Cor.BLACK));
 		colocarPecaNova('e', 8, new Rei(tabuleiro, Cor.BLACK));
 		colocarPecaNova('f', 8, new Bispo(tabuleiro, Cor.BLACK));
 		colocarPecaNova('g', 8, new Cavalo(tabuleiro, Cor.BLACK));
