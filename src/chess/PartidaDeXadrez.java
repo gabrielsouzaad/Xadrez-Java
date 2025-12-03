@@ -8,6 +8,7 @@ import boardgame.Peca;
 import boardgame.Posicao;
 import boardgame.Tabuleiro;
 import chess.pieces.Bispo;
+import chess.pieces.Cavalo;
 import chess.pieces.Peao;
 import chess.pieces.Rei;
 import chess.pieces.Torre;
@@ -200,9 +201,11 @@ public class PartidaDeXadrez {
 	
 	private void iniciarSetup() {
 		colocarPecaNova('a', 1, new Torre(tabuleiro, Cor.WHITE));
+		colocarPecaNova('b', 1, new Cavalo(tabuleiro, Cor.WHITE));
 		colocarPecaNova('c', 1, new Bispo(tabuleiro, Cor.WHITE));
 		colocarPecaNova('e', 1, new Rei(tabuleiro, Cor.WHITE));
 		colocarPecaNova('f', 1, new Bispo(tabuleiro, Cor.WHITE));
+		colocarPecaNova('g', 1, new Cavalo(tabuleiro, Cor.WHITE));
 		colocarPecaNova('h', 1, new Torre(tabuleiro, Cor.WHITE));
 		colocarPecaNova('a', 2, new Peao(tabuleiro, Cor.WHITE));
 		colocarPecaNova('b', 2, new Peao(tabuleiro, Cor.WHITE));
@@ -214,9 +217,11 @@ public class PartidaDeXadrez {
 		colocarPecaNova('h', 2, new Peao(tabuleiro, Cor.WHITE));
 	
 		colocarPecaNova('a', 8, new Torre(tabuleiro, Cor.BLACK));
+		colocarPecaNova('b', 8, new Cavalo(tabuleiro, Cor.BLACK));
 		colocarPecaNova('c', 8, new Bispo(tabuleiro, Cor.BLACK));
 		colocarPecaNova('e', 8, new Rei(tabuleiro, Cor.BLACK));
 		colocarPecaNova('f', 8, new Bispo(tabuleiro, Cor.BLACK));
+		colocarPecaNova('g', 8, new Cavalo(tabuleiro, Cor.BLACK));
 		colocarPecaNova('h', 8, new Torre(tabuleiro, Cor.BLACK));
 		colocarPecaNova('a', 7, new Peao(tabuleiro, Cor.BLACK));
 		colocarPecaNova('b', 7, new Peao(tabuleiro, Cor.BLACK));
