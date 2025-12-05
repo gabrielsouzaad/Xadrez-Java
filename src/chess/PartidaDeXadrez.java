@@ -1,6 +1,5 @@
 package chess;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -124,7 +123,7 @@ public class PartidaDeXadrez {
 		}
 		
 		if (!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("T") && !tipo.equals("RA")) {
-			throw new InvalidParameterException("Tipo de promoção inválida");
+			return promocao;
 		}
 		
 		Posicao pos = promocao.getChessPosicao().toPosicao();
